@@ -9,7 +9,10 @@ export default function Index() {
         if( localStorage.getItem('linkAfaky') ) {
             let getLinks = JSON.parse(localStorage.getItem('linkAfaky'));
             window.location.replace(getLinks)
-            console.log(getLinks);
+        }else {
+            setTimeout(() => {
+                window.location.replace('https://afakyerp.com/')
+            }, 5000);
         }
     }, [])
 

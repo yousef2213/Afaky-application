@@ -18,6 +18,7 @@ function Icon() {
                 <div className="list-group mt-2">
                     <Link to="/" className="list-group-item item-sideBar list-group-item-action" onClick={() => toggleSideBar()}>الرئيسية</Link>
                     <Link to="/add-url" className="list-group-item item-sideBar list-group-item-action" onClick={() => toggleSideBar()}>الاعدادات</Link>
+                    <Link to="/setting" className="list-group-item item-sideBar list-group-item-action" onClick={() => toggleSideBar()}>اعدادات الروابط</Link>
                 </div>
             </div>
         </div>

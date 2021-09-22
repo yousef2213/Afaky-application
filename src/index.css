@@ -10,6 +10,12 @@ body {
   border: 0 !important;
 }
 
+.img-splash {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
 .icon {
   display: none;
 }
