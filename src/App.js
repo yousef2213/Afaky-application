@@ -7,6 +7,7 @@ import Icon from './components/Icon';
 import Setting from './pages/Setting/Setting';
 
 import splash from "./splah.jpg";
+import loading from "./loading.svg";
 
 
 function App() {
@@ -30,7 +31,12 @@ function App() {
       setLoader(true)
     }, 2000);
     return (
-      <img src={splash} className="img-splash" />
+      <React.Fragment>
+            <img src={splash} className="img-splash" />
+            <div className="svg">
+              <img src={loading} className="svg-load" />
+            </div>
+      </React.Fragment>
     )
   }
 
