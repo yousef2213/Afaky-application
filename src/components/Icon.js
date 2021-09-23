@@ -2,11 +2,41 @@ import React from "react";
 import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 function Icon() {
 
+    const [check, setCheck] = useState(false)
+    useEffect(() => {
+        if( localStorage.getItem('linkAfaky') ) {
+            document.querySelector('.btn-setting').classList.add('activeLink');
+            setCheck(true)
+        }
+    }, [])
+
+    useEffect(() => {
+        funCheck();
+    }, [check])
+
+    let myVar;
+    const funCheck = () => {
+        myVar = setTimeout(() => {
+            if(check){
+                // console.log();
+                window.location.replace(JSON.parse(localStorage.getItem('linkAfaky')))
+            }
+        }, 5000);
+        
+    }
+
     const toggleSideBar = () => {
+        if(check){
+            document.querySelector('.btn-setting').classList.remove('activeLink');
+            setCheck(false)
+            clearTimeout(myVar);
+        }
         document.querySelector('.setting').classList.toggle('toggleSideBar')
     }
 

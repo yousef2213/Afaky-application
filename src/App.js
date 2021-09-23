@@ -14,6 +14,8 @@ function App() {
 
   const [loader, setLoader] = useState(false);
 
+  
+
   if(loader) {
     return (
       <React.Fragment>

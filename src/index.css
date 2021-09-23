@@ -10,6 +10,18 @@ body {
   border: 0 !important;
 }
 
+.activeLink {
+  animation: mymove 3s infinite;
+  /* transition: 0.3s all ease-in-out; */
+}
+
+@keyframes mymove {
+  0% {transform: scale(1.0);}
+  25% {transform: scale(1.1)}
+  50% {transform: scale(1.0)}
+  75% {transform: scale(1.1)}
+  100% {transform: scale(1.0)}
+}
 .img-splash {
   display: none;
 }

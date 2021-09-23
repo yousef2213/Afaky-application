@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Logo from "../logo.png"
+import React, { useEffect, useState } from "react";
+import Logo from "../logo.png";
 
 export default function Index() {
+
+
 
 
     return (
